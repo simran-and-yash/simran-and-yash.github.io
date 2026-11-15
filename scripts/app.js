@@ -117,7 +117,6 @@
   const openBtn = document.getElementById("open-ring-box-btn");
   const audioBtn = document.getElementById("audio-toggle-btn");
   const audioLabel = document.getElementById("audio-toggle-label");
-  const videoPlayer = document.getElementById("engagement-video-player");
 
   function syncAudioUi(playing) {
     if (!audioBtn || !audioLabel) return;
@@ -187,16 +186,6 @@
       if (!window.engagementAudio) return;
       const nowPlaying = window.engagementAudio.toggle();
       syncAudioUi(nowPlaying);
-    });
-  }
-
-  // Automatically pause page background music if guest plays the embedded Video Invite
-  if (videoPlayer) {
-    videoPlayer.addEventListener("play", () => {
-      if (window.engagementAudio && window.engagementAudio.isPlaying) {
-        window.engagementAudio.stop();
-        syncAudioUi(false);
-      }
     });
   }
 

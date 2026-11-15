@@ -1104,55 +1104,7 @@ textarea {
 }
 
 /* ==========================================================================
-   8. VIDEO INVITATION KEEPSAKE (#video-keepsake)
-   ========================================================================== */
-.video-keepsake-section {
-  background: linear-gradient(180deg, transparent 0%, rgba(244, 236, 225, 0.5) 50%, transparent 100%);
-}
-
-.video-showcase-card {
-  max-width: 560px;
-  margin: 0 auto;
-  padding: clamp(1.6rem, 3.8vw, 2.35rem);
-  border-radius: var(--radius-lg);
-  background: var(--surface-elevated);
-  border: 1px solid var(--hairline-strong);
-  box-shadow: var(--shadow-portrait);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.6rem;
-}
-
-.video-frame-shell {
-  width: 100%;
-  max-width: 330px;
-  padding: 10px;
-  border-radius: 26px;
-  background: linear-gradient(180deg, #fffdf9 0%, #f6ebe0 100%);
-  border: 1px solid var(--hairline-strong);
-  box-shadow: 0 20px 44px -16px rgba(55, 29, 24, 0.24);
-}
-
-.invite-video-player {
-  display: block;
-  width: 100%;
-  aspect-ratio: 9 / 16;
-  border-radius: 18px;
-  background: #f8efe6;
-  object-fit: cover;
-  border: 1px solid rgba(175, 103, 70, 0.28);
-}
-
-.video-keepsake-actions {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.8rem;
-}
-
-/* ==========================================================================
-   9. CEREMONIAL FOOTER & SIMPLE PDF-STYLE RSVP PLAQUE
+   8. CEREMONIAL FOOTER & SIMPLE PDF-STYLE RSVP PLAQUE
    ========================================================================== */
 .site-footer {
   padding: 3.25rem 0 3.75rem;
