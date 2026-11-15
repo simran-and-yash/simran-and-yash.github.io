@@ -265,7 +265,7 @@
         `DTEND:${endUtc}`,
         "SUMMARY:Simran & Yash — Our Ring Ceremony & Engagement (Followed by Dinner)",
         `LOCATION:Park Royal\\, Faridabad (${mapUrl})`,
-        `DESCRIPTION:Join us and our families (the Upadhyay & Goyal families) as we celebrate our Ring Ceremony & Engagement at 7:00 PM onwards\\, followed by Dinner.\\nVenue Map: ${mapUrl}\\nOur Invitation: ${siteUrl}`,
+        `DESCRIPTION:Join us and our families (the Goyal & Upadhyay families) as we celebrate our Ring Ceremony & Engagement at 7:00 PM onwards\\, followed by Dinner.\\nVenue Map: ${mapUrl}\\nOur Invitation: ${siteUrl}`,
         "END:VEVENT",
         "END:VCALENDAR"
       ].join("\r\n");
