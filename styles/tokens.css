@@ -1,0 +1,54 @@
+/* ==========================================================================
+   DESIGN TOKENS — SIMRAN & YASH ENGAGEMENT SUITE
+   Palette: Champagne Ivory, Blush Peony, Brushed Rose-Gold & Espresso-Rosewood
+   ========================================================================== */
+:root {
+  /* Curated HSL Surfaces */
+  --bg-ivory: hsl(35, 46%, 97%);          /* #FBF7F2 — warm handmade cotton paper */
+  --bg-champagne: hsl(33, 39%, 93%);      /* #F4ECE1 — soft champagne silk */
+  --bg-blush-tint: hsl(14, 44%, 95%);     /* #F9EFED — delicate peony veil */
+  --surface-paper: rgba(255, 252, 248, 0.92);
+  --surface-elevated: #FFFDF9;
+
+  /* Typography Ink (High-contrast warm rosewood — zero harsh pure black) */
+  --ink-primary: hsl(13, 35%, 16%);       /* #371D18 — deep espresso-rosewood */
+  --ink-secondary: hsl(15, 22%, 32%);     /* #63433B — warm cocoa-rosewood */
+  --ink-muted: hsl(17, 16%, 45%);         /* #85665D — tracked small-caps ink */
+  --ink-on-dark: hsl(35, 50%, 96%);       /* #FBF5EE — luminous ivory on velvet */
+
+  /* Metallic & Floral Accents (Zero purple/violet) */
+  --rose-gold: hsl(19, 43%, 48%);         /* #AF6746 — brushed rose-gold */
+  --rose-gold-deep: hsl(16, 48%, 37%);    /* #8C4431 — burnished rosewood-copper */
+  --rose-gold-soft: hsla(19, 43%, 48%, 0.16);
+  --champagne-foil: hsl(36, 46%, 64%);    /* #CEAC79 — champagne gold hairline */
+  --blush-petal: hsl(11, 46%, 82%);       /* #E6BEB8 — soft blush rose */
+
+  /* 3D Velvet Ring Box Palette */
+  --velvet-top: hsl(8, 34%, 33%);         /* #713A35 — plush dusty-rosewood velvet */
+  --velvet-mid: hsl(8, 37%, 26%);         /* #5B2A26 — deep rosewood velvet */
+  --velvet-deep: hsl(8, 40%, 19%);        /* #441E1B — shadow velvet */
+  --satin-cushion: hsl(36, 52%, 95%);     /* #FAF3E8 — pleated ivory satin */
+
+  /* Hairlines & Shadows */
+  --hairline: hsla(19, 38%, 45%, 0.22);
+  --hairline-strong: hsla(19, 42%, 44%, 0.42);
+  --shadow-soft: 0 18px 46px -18px rgba(55, 29, 24, 0.14);
+  --shadow-portrait: 0 28px 64px -20px rgba(72, 36, 28, 0.22);
+  --shadow-velvet: 0 34px 72px -16px rgba(42, 18, 15, 0.46);
+
+  /* Typography Families */
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-hindi: "Tiro Devanagari Hindi", "Cormorant Garamond", serif;
+
+  /* Fluid Spacing & Layout */
+  --container-max: 1120px;
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 28px;
+  --radius-arch: 280px 280px 26px 26px;
+
+  /* Motion Curves */
+  --ease-luxury: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-velvet: cubic-bezier(0.34, 1.24, 0.64, 1);
+}

@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simran &amp; Yash — Ring Ceremony &amp; Engagement Invitation | 27th Nov 2026</title>
+  <meta
+    name="description"
+    content="With joyful hearts, the Kumar &amp; Goyal families cordially invite you to the Ring Ceremony &amp; Engagement of Simran and Yash Goyal on Friday, 27th November 2026 at 7:00 PM onwards (followed by Dinner) at Park Royal, Faridabad."
+  />
+
+  <!-- Open Graph / WhatsApp Link Preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Simran &amp; Yash — Ring Ceremony &amp; Engagement Invitation" />
+  <meta
+    property="og:description"
+    content="Friday, 27th November 2026 · 7:00 PM Onwards · Dinner · Park Royal, Faridabad. Tap to open the velvet ring box invitation."
+  />
+  <meta property="og:url" content="https://simran-and-yash.github.io/" />
+  <meta property="og:image" content="https://simran-and-yash.github.io/assets/couple-caricature.jpg" />
+
+  <!-- Self-Hosted Couture Fonts & Design System -->
+  <link rel="stylesheet" href="styles/fonts.css" />
+  <link rel="stylesheet" href="styles/tokens.css" />
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body class="gate-locked">
+  <!-- Ambient Floating Blush Rose Petals & Champagne Shimmer -->
+  <canvas id="petal-canvas" aria-hidden="true"></canvas>
+
+  <!-- ======================================================================
+       SIGNATURE OPENING: INTERACTIVE 3D VELVET RING BOX (#ring-box-gate)
+       ====================================================================== -->
+  <div id="ring-box-gate" class="ring-box-gate" role="dialog" aria-modal="true" aria-label="Engagement Invitation Reveal">
+    <div class="gate-inner">
+      <p class="gate-invocation" lang="hi">॥ श्री गणेशाय नमः ॥</p>
+      <p class="gate-kicker">The Kumar &amp; Goyal Families Invite You</p>
+      <p class="gate-couple-preview">Simran &amp; Yash</p>
+      <p class="gate-date-preview">Ring Ceremony · 27th November 2026</p>
+
+      <!-- Interactive 3D Rosewood Velvet Ring Box -->
+      <div
+        id="ring-box-stage"
+        class="ring-box-stage"
+        role="button"
+        tabindex="0"
+        aria-label="Tap to open the engagement velvet ring box"
+      >
+        <div class="ring-radiance" aria-hidden="true"></div>
+        <div class="ring-box-3d">
+          <!-- Sparkling Interlocking Diamond & Rose-Gold Rings Inside -->
+          <svg class="rings-treasure" viewBox="0 0 120 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="roseGoldBand" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#FCEAD6" />
+                <stop offset="48%" stop-color="#D59B78" />
+                <stop offset="100%" stop-color="#9A593C" />
+              </linearGradient>
+              <linearGradient id="champagneBand" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#FFF7E8" />
+                <stop offset="50%" stop-color="#DFC08E" />
+                <stop offset="100%" stop-color="#A8824B" />
+              </linearGradient>
+            </defs>
+            <!-- Starlight Facet Sparkle -->
+            <g class="diamond-sparkle">
+              <path d="M60 4 L62.5 15.5 L74 18 L62.5 20.5 L60 32 L57.5 20.5 L46 18 L57.5 15.5 Z" fill="#FFFDF8" />
+              <circle cx="60" cy="18" r="3" fill="#FCE8C8" />
+            </g>
+            <!-- Solitaire Diamond Crown -->
+            <polygon points="51,28 69,28 74,35 60,47 46,35" fill="#FFFFFF" stroke="#CFA07E" stroke-width="1.4" />
+            <polyline points="46,35 74,35" stroke="#E5C5AE" stroke-width="1" />
+            <polyline points="53,28 56,35 60,47 64,35 67,28" stroke="#E5C5AE" stroke-width="1" fill="none" />
+            <!-- Bride's Solitaire Ring -->
+            <circle cx="52" cy="66" r="22" stroke="url(#roseGoldBand)" stroke-width="5.5" />
+            <!-- Groom's Interlocking Band -->
+            <circle cx="71" cy="68" r="21" stroke="url(#champagneBand)" stroke-width="6" />
+          </svg>
+
+          <!-- Hinged Velvet Lid with Embossed S & Y Clasp -->
+          <div class="velvet-lid">
+            <span class="velvet-clasp">S &amp; Y</span>
+          </div>
+
+          <!-- Plush Velvet Base & Ivory Satin Cushion -->
+          <div class="velvet-base"></div>
+        </div>
+      </div>
+
+      <button id="open-ring-box-btn" type="button" class="gate-open-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+          <path d="M12 2L14.6 8.4L21 11L14.6 13.6L12 20L9.4 13.6L3 11L9.4 8.4L12 2Z" />
+        </svg>
+        <span>Open Ring Box</span>
+      </button>
+      <p class="gate-hint">Tap to unveil the invitation with music</p>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       STICKY HEADER BAR
+       ====================================================================== -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a href="#hero" class="brand-crest" id="brand-home-link">
+        <span class="brand-monogram" aria-hidden="true">S&amp;Y</span>
+        <span class="brand-meta">
+          <span class="brand-names">Simran &amp; Yash</span>
+          <span class="brand-date">27 · 11 · 2026 · Faridabad</span>
+        </span>
+      </a>
+
+      <nav class="topbar-actions" aria-label="Invitation Actions">
+        <a
+          id="nav-download-pdf-btn"
+          href="dist/Simran_and_Yash_Engagement_Invite.pdf"
+          download="Simran_and_Yash_Engagement_Invite.pdf"
+          class="nav-link-chip nav-hide-mobile"
+        >
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <span>Invite Card PDF</span>
+        </a>
+
+        <a id="nav-rsvp-link" href="#rsvp" class="nav-link-chip">RSVP</a>
+
+        <button id="audio-toggle-btn" type="button" class="audio-btn" aria-pressed="false" aria-label="Toggle background music">
+          <span class="sound-bars" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </span>
+          <span id="audio-toggle-label">Music Off</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ====================================================================
+         CHAPTER 1: HERO PROCLAMATION & CUSTOM CARICATURE PORTRAIT
+         ==================================================================== -->
+    <section id="hero" class="hero-section">
+      <div class="container">
+        <div class="hero-invocation-bar">
+          <p class="hero-hindi" lang="hi">॥ श्री गणेशाय नमः ॥</p>
+          <p class="hero-kicker">Ring Ceremony &amp; Engagement Celebration</p>
+        </div>
+
+        <div class="hero-grid">
+          <!-- Custom Watercolor Caricature Archway -->
+          <figure class="portrait-stage">
+            <div class="portrait-arch-frame">
+              <div class="portrait-arch-inner">
+                <img
+                  src="assets/couple-caricature.jpg"
+                  alt="Custom watercolor engagement portrait of Simran and Yash Goyal exchanging a diamond ring beneath a white rose, blush peony, and crystal chandelier arch"
+                  width="900"
+                  height="1200"
+                />
+              </div>
+            </div>
+            <figcaption class="portrait-caption-plaque">Two Hearts · One Promise · 27 Nov 2026</figcaption>
+          </figure>
+
+          <!-- Family Proclamation & Primary Details -->
+          <div class="proclamation-col">
+            <p class="eyebrow">With Blessings of Elders &amp; Loving Families</p>
+            <h1 class="hero-title">Simran &amp; Yash</h1>
+            <p class="hero-lead">
+              Together with their families, joyfully request the honour of your gracious presence and blessings as they exchange engagement rings and celebrate the beginning of their forever.
+            </p>
+
+            <!-- Bride & Groom Parentage Ledger -->
+            <div class="parentage-ledger" aria-label="Bride and Groom Family Lineage">
+              <div class="person-block">
+                <span class="person-lineage-label">The Bride</span>
+                <span class="person-name">Simran</span>
+                <span class="person-parents">
+                  Daughter of <strong>Late Mrs. Neelam</strong><br />
+                  &amp; <strong>Mr. Manoj Kumar</strong>
+                </span>
+              </div>
+
+              <div class="rings-knot" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.7">
+                  <circle cx="10.5" cy="15.5" r="6.5" />
+                  <circle cx="17.5" cy="15.5" r="6.5" />
+                  <path d="M8.5 9L10.5 6.5L12.5 9" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+
+              <div class="person-block">
+                <span class="person-lineage-label">The Groom</span>
+                <span class="person-name">Yash Goyal</span>
+                <span class="person-parents">
+                  Son of <strong>Mrs. Hemlata Goyal</strong><br />
+                  &amp; <strong>Mr. Satish Goyal</strong>
+                </span>
+              </div>
+            </div>
+
+            <!-- Key Event Datum Strip -->
+            <div class="hero-event-strip">
+              <div class="event-datum">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                  <rect x="3" y="4" width="18" height="18" rx="2" />
+                  <path d="M16 2v4M8 2v4M3 10h18" stroke-linecap="round" />
+                </svg>
+                <span><strong>Friday, 27th November 2026</strong></span>
+              </div>
+
+              <div class="event-datum">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M12 7v5l3 2" stroke-linecap="round" />
+                </svg>
+                <span><strong>7:00 PM Onwards</strong> · Dinner</span>
+              </div>
+
+              <div class="event-datum">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                  <path d="M12 21s-7-5.6-7-11a7 7 0 1114 0c0 5.4-7 11-7 11z" />
+                  <circle cx="12" cy="10" r="2.5" />
+                </svg>
+                <span><strong>Park Royal, Faridabad</strong></span>
+              </div>
+            </div>
+
+            <div class="hero-cta-row">
+              <a id="hero-rsvp-cta" href="#rsvp" class="btn-primary">
+                <span>Send Blessings &amp; RSVP</span>
+              </a>
+              <a
+                id="hero-map-cta"
+                href="https://maps.app.goo.gl/xLdzunZ6RtFFszkr5?g_st=aw"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-secondary"
+              >
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true">
+                  <path d="M12 21s-7-5.6-7-11a7 7 0 1114 0c0 5.4-7 11-7 11z" />
+                  <circle cx="12" cy="10" r="2.5" />
+                </svg>
+                <span>Open Venue Map</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         CHAPTER 2: LIVE COUNTDOWN & KEEPSAKE DOWNLOADS
+         ==================================================================== -->
+    <section id="countdown-section" class="countdown-section reveal-on-scroll">
+      <div class="container">
+        <div class="countdown-panel">
+          <div class="countdown-copy">
+            <p class="eyebrow">Counting Down to the Moment</p>
+            <h2>Until the Rings Are Exchanged</h2>
+            <p>
+              Save Friday, 27th November 2026 at 7:00 PM to your calendar, or download the 1-page formal invitation card for WhatsApp sharing.
+            </p>
+            <div class="keepsake-actions">
+              <button id="add-calendar-btn" type="button" class="btn-secondary">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true">
+                  <rect x="3" y="4" width="18" height="18" rx="2" />
+                  <path d="M16 2v4M8 2v4M3 10h18M12 14v4M10 16h4" stroke-linecap="round" />
+                </svg>
+                <span>Save to Calendar</span>
+              </button>
+
+              <a
+                id="download-invite-pdf-btn"
+                href="dist/Simran_and_Yash_Engagement_Invite.pdf"
+                download="Simran_and_Yash_Engagement_Invite.pdf"
+                class="btn-secondary"
+              >
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true">
+                  <path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <span>Download 1-Page Invite PDF</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="countdown-dials" role="timer" aria-live="polite" aria-label="Countdown to Simran and Yash Engagement">
+            <div class="dial-box">
+              <span id="cd-days" class="dial-value">12</span>
+              <span class="dial-label">Days</span>
+            </div>
+            <div class="dial-box">
+              <span id="cd-hours" class="dial-value">00</span>
+              <span class="dial-label">Hours</span>
+            </div>
+            <div class="dial-box">
+              <span id="cd-minutes" class="dial-value">00</span>
+              <span class="dial-label">Minutes</span>
+            </div>
+            <div class="dial-box">
+              <span id="cd-seconds" class="dial-value">00</span>
+              <span class="dial-label">Seconds</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         CHAPTER 3: EVENING PROGRAMME & ATTIRE PALETTE
+         ==================================================================== -->
+    <section id="programme" class="section programme-section reveal-on-scroll">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">Friday, 27th November 2026</p>
+          <h2 class="section-title">The Evening Celebration</h2>
+          <div class="botanical-divider" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 3L14.5 9.5L21 12L14.5 14.5L12 21L9.5 14.5L3 12L9.5 9.5L12 3Z" />
+            </svg>
+          </div>
+          <p class="section-subtitle">
+            An enchanted evening of rings, laughter, music, and celebratory dining beneath the chandeliers of Park Royal.
+          </p>
+        </div>
+
+        <div class="programme-layout">
+          <!-- Timeline -->
+          <div class="timeline-list">
+            <article class="timeline-item">
+              <span class="timeline-time">7:00 PM Onwards</span>
+              <h3 class="timeline-heading">Welcome &amp; Evening Refreshments</h3>
+              <p class="timeline-detail">Warm greetings and mocktails beneath crystal chandeliers as both families welcome you.</p>
+            </article>
+
+            <article class="timeline-item">
+              <span class="timeline-time">7:45 PM</span>
+              <h3 class="timeline-heading">The Ring Ceremony (Sagai)</h3>
+              <p class="timeline-detail">Simran and Yash exchange engagement rings amidst floral showers and blessings from elders.</p>
+            </article>
+
+            <article class="timeline-item">
+              <span class="timeline-time">8:30 PM</span>
+              <h3 class="timeline-heading">Celebratory Toast &amp; Music</h3>
+              <p class="timeline-detail">Cake cutting, family portraits, and joyful melodies celebrating the newly engaged couple.</p>
+            </article>
+
+            <article class="timeline-item">
+              <span class="timeline-time">9:00 PM</span>
+              <h3 class="timeline-heading">Grand Celebratory Dinner</h3>
+              <p class="timeline-detail">A curated gourmet dinner spread shared with family, relatives, and cherished friends.</p>
+            </article>
+          </div>
+
+          <!-- Evening Palette & Hospitality Note -->
+          <aside class="attire-card" aria-label="Dress Code Inspiration">
+            <p class="eyebrow">Style Inspiration</p>
+            <h3>Evening Glamour &amp; Soft Pastels</h3>
+            <p>
+              Complement the champagne chandelier soirée in shimmer pastels, blush rose, ivory silk, Indo-western ensembles, or classic evening formals.
+            </p>
+            <div class="swatch-row">
+              <div class="swatch-chip">
+                <span class="swatch-dot" style="background-color: #F0E2CE;"></span>
+                <span class="swatch-name">Champagne Silk</span>
+              </div>
+              <div class="swatch-chip">
+                <span class="swatch-dot" style="background-color: #E4B7B2;"></span>
+                <span class="swatch-name">Blush Peony</span>
+              </div>
+              <div class="swatch-chip">
+                <span class="swatch-dot" style="background-color: #B87B5E;"></span>
+                <span class="swatch-name">Rose-Gold Foil</span>
+              </div>
+              <div class="swatch-chip">
+                <span class="swatch-dot" style="background-color: #2C2220;"></span>
+                <span class="swatch-name">Evening Tuxedo</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         CHAPTER 4: VENUE SHOWCASE — PARK ROYAL, FARIDABAD
+         ==================================================================== -->
+    <section id="venue" class="section reveal-on-scroll">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">The Destination</p>
+          <h2 class="section-title">Park Royal, Faridabad</h2>
+          <p class="section-subtitle">
+            Join us for an unforgettable evening of celebration and dinner at Park Royal, Faridabad.
+          </p>
+        </div>
+
+        <div class="venue-showcase">
+          <div class="venue-artwork">
+            <img
+              src="assets/park-royal-venue.jpg"
+              alt="Evening watercolor illustration of Park Royal, Faridabad illuminated with crystal chandeliers and white floral arches"
+              width="1280"
+              height="720"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="venue-details">
+            <p class="eyebrow">Venue &amp; Navigation</p>
+            <h3 class="venue-name">Park Royal</h3>
+            <p class="venue-sub">Faridabad, Haryana (Delhi NCR)</p>
+
+            <div class="venue-meta-list">
+              <div class="venue-meta-row">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                  <rect x="3" y="4" width="18" height="18" rx="2" />
+                  <path d="M16 2v4M8 2v4M3 10h18" stroke-linecap="round" />
+                </svg>
+                <span>Friday, 27th November 2026</span>
+              </div>
+
+              <div class="venue-meta-row">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M12 7v5l3 2" stroke-linecap="round" />
+                </svg>
+                <span>7:00 PM Onwards · Followed by Dinner</span>
+              </div>
+
+              <div class="venue-meta-row">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                  <path d="M12 21s-7-5.6-7-11a7 7 0 1114 0c0 5.4-7 11-7 11z" />
+                  <circle cx="12" cy="10" r="2.5" />
+                </svg>
+                <span>Valet Parking Available at Venue Entrance</span>
+              </div>
+            </div>
+
+            <div class="venue-btn-row">
+              <a
+                id="venue-directions-btn"
+                href="https://maps.app.goo.gl/xLdzunZ6RtFFszkr5?g_st=aw"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-primary"
+              >
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M12 21s-7-5.6-7-11a7 7 0 1114 0c0 5.4-7 11-7 11z" />
+                  <circle cx="12" cy="10" r="2.5" />
+                </svg>
+                <span>Get Google Maps Directions</span>
+              </a>
+
+              <button id="copy-venue-link-btn" type="button" class="btn-secondary">
+                <span>Copy Map Link</span>
+              </button>
+            </div>
+            <p id="copy-venue-feedback" class="copy-feedback" role="status" aria-live="polite"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         CHAPTER 5: INTERACTIVE RSVP & BLESSINGS WALL
+         ==================================================================== -->
+    <section id="rsvp" class="section reveal-on-scroll">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">Your Presence Is Our Greatest Blessing</p>
+          <h2 class="section-title">RSVP &amp; Warm Wishes</h2>
+          <p class="section-subtitle">
+            Kindly confirm your attendance or share a blessing for Simran &amp; Yash directly with the family via WhatsApp.
+          </p>
+        </div>
+
+        <div class="rsvp-grid">
+          <!-- Interactive WhatsApp RSVP Form -->
+          <div class="rsvp-card">
+            <form id="rsvp-form">
+              <div class="form-grid">
+                <div class="field-group full-width">
+                  <label for="rsvp-guest-name">Your Name / Family Name</label>
+                  <input
+                    id="rsvp-guest-name"
+                    name="guestName"
+                    type="text"
+                    class="field-control"
+                    placeholder="e.g., Sharma Family / Rohan &amp; Priya"
+                    required
+                  />
+                </div>
+
+                <div class="field-group">
+                  <label for="rsvp-attending">Will You Join Us?</label>
+                  <select id="rsvp-attending" name="attending" class="field-control">
+                    <option value="Joyfully Attending">Joyfully Attending</option>
+                    <option value="Sending Warm Blessings from Afar">Sending Blessings from Afar</option>
+                  </select>
+                </div>
+
+                <div class="field-group">
+                  <label for="rsvp-guest-count">Number of Guests</label>
+                  <select id="rsvp-guest-count" name="guestCount" class="field-control">
+                    <option value="1 Guest">1 Guest</option>
+                    <option value="2 Guests" selected>2 Guests</option>
+                    <option value="3 Guests">3 Guests</option>
+                    <option value="4 Guests">4 Guests</option>
+                    <option value="Family (5+ Guests)">Family (5+ Guests)</option>
+                  </select>
+                </div>
+
+                <div class="field-group full-width">
+                  <label for="rsvp-blessing-note">Blessings &amp; Note for Simran &amp; Yash (Optional)</label>
+                  <textarea
+                    id="rsvp-blessing-note"
+                    name="blessingNote"
+                    class="field-control"
+                    placeholder="Write a heartfelt wish for the couple..."
+                  ></textarea>
+                </div>
+              </div>
+
+              <button id="rsvp-submit-whatsapp-btn" type="submit" class="btn-primary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true">
+                  <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <span>Send RSVP via WhatsApp</span>
+              </button>
+              <p class="rsvp-note">Opens a pre-filled WhatsApp message to the family RSVP desk.</p>
+            </form>
+          </div>
+
+          <!-- Direct Family Contacts & Blessings Keepsake -->
+          <div class="contacts-card">
+            <p class="eyebrow">With Warm Regards</p>
+            <h3>Family RSVP Contacts</h3>
+            <p>We look forward to welcoming you personally at Park Royal, Faridabad.</p>
+
+            <div class="contact-list">
+              <a id="call-manoj-btn" href="tel:+919891427828" class="contact-row">
+                <span class="contact-person">
+                  <strong>Mr. Manoj Kumar</strong>
+                  <span>Bride's Father</span>
+                </span>
+                <span class="contact-phone">+91 98914 27828</span>
+              </a>
+
+              <a id="call-satish-btn" href="tel:+919311016877" class="contact-row">
+                <span class="contact-person">
+                  <strong>Mr. Satish Goyal</strong>
+                  <span>Groom's Father</span>
+                </span>
+                <span class="contact-phone">+91 93110 16877</span>
+              </a>
+            </div>
+
+            <div class="blessings-feed">
+              <h4>Warm Wishes</h4>
+              <div id="blessings-list">
+                <div class="blessing-entry">
+                  <span>"Wishing Simran &amp; Yash a lifetime of love, laughter, and togetherness as you begin this beautiful chapter!"</span>
+                  <cite>— Kumar &amp; Goyal Families</cite>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================================================================
+       CEREMONIAL FOOTER
+       ====================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-monogram" aria-hidden="true">S&amp;Y</div>
+      <p class="footer-hashtag">#SimranSaidYash</p>
+      <p class="footer-compliments">With Best Compliments From the Kumar &amp; Goyal Families</p>
+      <div class="footer-links">
+        <a id="footer-pdf-link" href="dist/Simran_and_Yash_Engagement_Invite.pdf" download="Simran_and_Yash_Engagement_Invite.pdf">
+          Download 1-Page PDF Invite
+        </a>
+        <a id="footer-map-link" href="https://maps.app.goo.gl/xLdzunZ6RtFFszkr5?g_st=aw" target="_blank" rel="noopener noreferrer">
+          Park Royal, Faridabad Map
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="config/engagement-config.js"></script>
+  <script src="scripts/audio-engine.js"></script>
+  <script src="scripts/app.js"></script>
+</body>
+</html>
