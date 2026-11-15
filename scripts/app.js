@@ -1,7 +1,8 @@
 /**
  * INTERACTIVE APPLICATION CONTROLLER — SIMRAN & YASH ENGAGEMENT SUITE
  * Controls 3D Velvet Ring Box reveal, ambient blush petals, live countdown,
- * .ics calendar download, venue map link copy, and WhatsApp RSVP dispatch.
+ * .ics calendar download, venue map link copy, and background audio pause
+ * when the inline Video Invitation player starts playing.
  */
 (function () {
   const cfg = window.ENGAGEMENT_CONFIG || {};
@@ -116,6 +117,7 @@
   const openBtn = document.getElementById("open-ring-box-btn");
   const audioBtn = document.getElementById("audio-toggle-btn");
   const audioLabel = document.getElementById("audio-toggle-label");
+  const videoPlayer = document.getElementById("engagement-video-player");
 
   function syncAudioUi(playing) {
     if (!audioBtn || !audioLabel) return;
@@ -185,6 +187,16 @@
       if (!window.engagementAudio) return;
       const nowPlaying = window.engagementAudio.toggle();
       syncAudioUi(nowPlaying);
+    });
+  }
+
+  // Automatically pause page background music if guest plays the embedded Video Invite
+  if (videoPlayer) {
+    videoPlayer.addEventListener("play", () => {
+      if (window.engagementAudio && window.engagementAudio.isPlaying) {
+        window.engagementAudio.stop();
+        syncAudioUi(false);
+      }
     });
   }
 
@@ -262,9 +274,9 @@
         `DTSTAMP:${startUtc}`,
         `DTSTART:${startUtc}`,
         `DTEND:${endUtc}`,
-        "SUMMARY:Simran & Yash — Ring Ceremony & Engagement (Followed by Dinner)",
+        "SUMMARY:Simran & Yash — Our Ring Ceremony & Engagement (Followed by Dinner)",
         `LOCATION:Park Royal\\, Faridabad (${mapUrl})`,
-        `DESCRIPTION:Join the Kumar & Goyal families to celebrate the Ring Ceremony & Engagement of Simran and Yash Goyal at 7:00 PM onwards\\, followed by Dinner.\\nVenue Map: ${mapUrl}\\nInvitation: ${siteUrl}`,
+        `DESCRIPTION:Join us and our families (the Upadhyay & Goyal families) as we celebrate our Ring Ceremony & Engagement at 7:00 PM onwards\\, followed by Dinner.\\nVenue Map: ${mapUrl}\\nOur Invitation: ${siteUrl}`,
         "END:VEVENT",
         "END:VCALENDAR"
       ].join("\r\n");
@@ -299,55 +311,6 @@
           copyFeedback.textContent = url;
         }
       }
-    });
-  }
-
-  /* ------------------------------------------------------------------------
-     7. WHATSAPP RSVP & BLESSINGS WALL
-     ------------------------------------------------------------------------ */
-  const rsvpForm = document.getElementById("rsvp-form");
-  const blessingsList = document.getElementById("blessings-list");
-
-  if (rsvpForm) {
-    rsvpForm.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const guestName = (document.getElementById("rsvp-guest-name")?.value || "").trim();
-      const attending = document.getElementById("rsvp-attending")?.value || "Joyfully Attending";
-      const guestCount = document.getElementById("rsvp-guest-count")?.value || "2 Guests";
-      const blessingNote = (document.getElementById("rsvp-blessing-note")?.value || "").trim();
-
-      if (!guestName) {
-        document.getElementById("rsvp-guest-name")?.focus();
-        return;
-      }
-
-      if (blessingNote && blessingsList) {
-        const item = document.createElement("div");
-        item.className = "blessing-entry";
-        const quoteText = document.createElement("span");
-        quoteText.textContent = `"${blessingNote}"`;
-        const cite = document.createElement("cite");
-        cite.textContent = `— ${guestName}`;
-        item.appendChild(quoteText);
-        item.appendChild(cite);
-        blessingsList.prepend(item);
-      }
-
-      const waTarget = (cfg.rsvp && cfg.rsvp.primaryWhatsappNumber) || "919311016877";
-      const lines = [
-        "Namaste! Ring Ceremony & Engagement RSVP for *Simran & Yash*",
-        "",
-        `• *Guest Name:* ${guestName}`,
-        `• *Response:* ${attending}`,
-        `• *Guests:* ${guestCount}`,
-        `• *Event:* Friday, 27th November 2026 · 7:00 PM Onwards (Park Royal, Faridabad)`
-      ];
-      if (blessingNote) {
-        lines.push(`• *Blessings:* "${blessingNote}"`);
-      }
-
-      const waUrl = `https://wa.me/${waTarget}?text=${encodeURIComponent(lines.join("\n"))}`;
-      window.open(waUrl, "_blank", "noopener,noreferrer");
     });
   }
 })();

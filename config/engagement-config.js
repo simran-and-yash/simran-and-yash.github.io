@@ -1,7 +1,8 @@
 /**
  * SINGLE SOURCE OF TRUTH — SIMRAN & YASH RING CEREMONY / ENGAGEMENT SUITE
- * Powers both the interactive Engagement website (index.html) and the
- * 1-page clickable smartphone PDF invitation (invite-card.html -> dist/*.pdf).
+ * Powers the interactive Engagement website (index.html), the 1-page clickable
+ * smartphone PDF invitation (invite-card.html -> dist/*.pdf), and the
+ * 36-second HD Video Invitation (video-invite.html -> dist/*.mp4).
  */
 (function (root, factory) {
   if (typeof module === "object" && module.exports) {
@@ -12,12 +13,14 @@
 })(typeof globalThis !== "undefined" ? globalThis : this, function () {
   return {
     meta: {
-      title: "Simran & Yash — Ring Ceremony & Engagement Invitation",
+      title: "Simran & Yash — Our Ring Ceremony & Engagement Invitation",
       description:
-        "With joyful hearts, the Kumar & Goyal families invite you to the Ring Ceremony & Engagement of Simran and Yash Goyal on Friday, 27th November 2026 at 7:00 PM onwards at Park Royal, Faridabad.",
+        "Together with our loving families (the Upadhyay & Goyal families), we joyfully invite you to our Ring Ceremony & Engagement on Friday, 27th November 2026 at 7:00 PM onwards at Park Royal, Faridabad.",
       websiteUrl: "https://simran-and-yash.github.io/",
       pdfFileName: "Simran_and_Yash_Engagement_Invite.pdf",
-      pdfRelativePath: "dist/Simran_and_Yash_Engagement_Invite.pdf"
+      pdfRelativePath: "dist/Simran_and_Yash_Engagement_Invite.pdf",
+      videoFileName: "Simran_and_Yash_Engagement_Video_Invite.mp4",
+      videoRelativePath: "dist/Simran_and_Yash_Engagement_Video_Invite.mp4"
     },
 
     invocation: {
@@ -31,7 +34,7 @@
       hashtag: "#SimranSaidYash",
       caricatureImage: "assets/couple-caricature.jpg",
       caricatureAlt:
-        "Custom watercolor engagement caricature of Simran and Yash Goyal exchanging a diamond ring beneath a white rose, blush peony, and crystal chandelier arch",
+        "Custom watercolor engagement portrait of Simran and Yash Goyal exchanging a diamond ring beneath a white rose, blush peony, and crystal chandelier arch",
       bride: {
         firstName: "Simran",
         fullName: "Simran",
@@ -51,12 +54,12 @@
     },
 
     event: {
-      occasionBadge: "Ring Ceremony & Dinner",
-      occasionTitle: "The Engagement Celebration",
+      occasionBadge: "Our Ring Ceremony & Dinner",
+      occasionTitle: "Our Engagement Celebration",
       inviteProclamation:
-        "Together with their loving families, invite your gracious presence and heartfelt blessings as they exchange rings and celebrate the beginning of forever.",
+        "Together with our loving families, we joyfully request the honour of your gracious presence and heartfelt blessings as we exchange engagement rings and celebrate the beginning of our forever.",
       pdfInviteLine:
-        "Request the honour of your gracious presence & blessings on the auspicious occasion of the Ring Ceremony & Engagement of",
+        "Together with our loving families, we cordially invite your gracious presence & blessings for our",
       dateDisplay: "Friday, 27th November 2026",
       dateShort: "27th November 2026",
       dayOfWeek: "Friday",
@@ -85,41 +88,29 @@
 
     programme: [
       {
-        time: "7:00 PM",
+        time: "7:00 PM Onwards",
         title: "Welcome & Evening Refreshments",
-        detail: "Warm greetings beneath crystal chandeliers as both families welcome you."
+        detail: "Warm greetings and mocktails beneath crystal chandeliers as we and our families welcome you."
       },
       {
         time: "7:45 PM",
-        title: "The Ring Ceremony (Sagai)",
-        detail: "Exchange of engagement rings, floral shower, and blessings from elders."
+        title: "Our Ring Ceremony (Sagai)",
+        detail: "Join us as we exchange engagement rings amidst floral showers and heartfelt blessings from our elders."
       },
       {
         time: "8:30 PM",
         title: "Celebratory Toast & Music",
-        detail: "Cake cutting, family portraits, and joyful melodies on stage."
+        detail: "Cake cutting, family portraits, and joyful melodies as we celebrate our new beginning together."
       },
       {
         time: "9:00 PM",
         title: "Grand Celebratory Dinner",
-        detail: "A curated gourmet dinner spread shared with family and dear friends."
+        detail: "A curated gourmet dinner spread shared with our families, relatives, and cherished friends."
       }
     ],
 
-    attire: {
-      title: "Evening Glamour & Soft Pastels",
-      subtitle: "Champagne ivory, blush rose, rose-gold shimmer, or classic black-tie Indo-western",
-      swatches: [
-        { name: "Champagne Silk", hex: "#F0E2CE" },
-        { name: "Blush Peony", hex: "#E4B7B2" },
-        { name: "Brushed Rose-Gold", hex: "#B87B5E" },
-        { name: "Espresso Tuxedo", hex: "#2C2220" }
-      ]
-    },
-
     rsvp: {
-      primaryWhatsappNumber: "919311016877",
-      complimentsFrom: "With Best Compliments From the Kumar & Goyal Families",
+      complimentsFrom: "With Best Compliments From Our Families · The Upadhyay & Goyal Families",
       contacts: [
         {
           name: "Mr. Manoj Kumar",

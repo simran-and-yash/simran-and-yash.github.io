@@ -1,10 +1,11 @@
 {
   "name": "simran-and-yash-engagement-suite",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
-  "description": "State-of-the-art Ring Ceremony & Engagement Invitation Suite (Interactive 3D Velvet Ring Box Website + 1-Page Clickable Portrait PDF Invite) for Simran & Yash Goyal",
+  "description": "Couture Ring Ceremony & Engagement Invitation Suite (Interactive 3D Velvet Ring Box Website + 1-Page Clickable Portrait PDF + 36s Full HD Video Invite) for Simran & Yash Goyal",
   "scripts": {
     "build:pdf": "node scripts/build-pdf.mjs",
-    "dev": "python3 -m http.server 8081"
+    "build:video": "node scripts/render-video.mjs",
+    "dev": "npx serve ."
   }
 }
