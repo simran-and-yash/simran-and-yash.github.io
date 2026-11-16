@@ -5,8 +5,9 @@
  * preserving self-hosted fonts, watercolor caricature, and clickable website & Google Maps URIs.
  */
 import { execFileSync } from "node:child_process";
-import { existsSync, mkdirSync, readFileSync } from "node:fs";
-import { dirname, resolve } from "node:path";
+import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { dirname, join, resolve } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { createRequire } from "node:module";
 
@@ -36,23 +37,30 @@ if (!chromeBin) {
   process.exit(1);
 }
 
-console.log(`Rendering 1-page Engagement PDF using ${chromeBin}...`);
-execFileSync(
-  chromeBin,
-  [
-    "--headless",
-    "--no-sandbox",
-    "--disable-gpu",
-    "--disable-dev-shm-usage",
-    "--no-proxy-server",
-    "--run-all-compositor-stages-after-draw",
-    "--virtual-time-budget=5000",
-    "--no-pdf-header-footer",
-    `--print-to-pdf=${outputPdf}`,
-    cardHtmlUrl
-  ],
-  { stdio: "inherit" }
-);
+const tempProfile = mkdtempSync(join(tmpdir(), "simran-yash-pdf-"));
+
+try {
+  console.log(`Rendering 1-page Engagement PDF using ${chromeBin}...`);
+  execFileSync(
+    chromeBin,
+    [
+      "--headless=new",
+      `--user-data-dir=${tempProfile}`,
+      "--no-sandbox",
+      "--disable-gpu",
+      "--disable-dev-shm-usage",
+      "--no-proxy-server",
+      "--run-all-compositor-stages-after-draw",
+      "--virtual-time-budget=5000",
+      "--no-pdf-header-footer",
+      `--print-to-pdf=${outputPdf}`,
+      cardHtmlUrl
+    ],
+    { stdio: "inherit" }
+  );
+} finally {
+  rmSync(tempProfile, { recursive: true, force: true });
+}
 
 const pdfBytes = readFileSync(outputPdf);
 const hasSiteUri = pdfBytes.includes(Buffer.from(config.meta.websiteUrl, "utf8"));

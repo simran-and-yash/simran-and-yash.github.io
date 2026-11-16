@@ -34,7 +34,7 @@
       hashtag: "#SimranSaidYash",
       caricatureImage: "assets/couple-caricature.jpg",
       caricatureAlt:
-        "Custom watercolor engagement portrait of Simran and Yash Goyal exchanging a diamond ring beneath a white rose, blush peony, and crystal chandelier arch",
+        "Custom watercolor engagement portrait of Simran and Yash exchanging a diamond ring beneath a white rose, blush peony, and crystal chandelier arch",
       bride: {
         firstName: "Simran",
         fullName: "Simran",
@@ -45,7 +45,7 @@
       },
       groom: {
         firstName: "Yash",
-        fullName: "Yash Goyal",
+        fullName: "Yash",
         mother: "Mrs. Hemlata Goyal",
         father: "Mr. Satish Goyal",
         parentageLong: "Son of Mrs. Hemlata Goyal & Mr. Satish Goyal",
